@@ -5,7 +5,7 @@
  * Date: 08.08.2023
  * Time: 16:42
  */
-include('incs/connect.php');
+include('../incs/connect.php');
 $query = mysqli_query($connection, "CREATE TABLE IF NOT EXISTS locale (
         id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
         object varchar(255),
