@@ -108,8 +108,8 @@
 				</form>
                 <div id="shortcuts_lang">
                     <select name="lang" id="lang" onchange="selectLang(this.value)">
-                        <option value="kaz" <?= ($_SESSION['lang']) == 'kaz' ? 'selected' : ''; ?>><?= $oL::get('Қазақша')?></option>
-                        <option value="rus" <?= ($_SESSION['lang']) == 'rus' ? 'selected' : ''; ?>><?= $oL::get('Орыс тілі')?></option>
+                        <option value="kaz" <?= isset($_SESSION['lang']) && ($_SESSION['lang']) == 'kaz' ? 'selected' : ''; ?>><?= $oL::get('Қазақша')?></option>
+                        <option value="rus" <?= isset($_SESSION['lang']) && ($_SESSION['lang']) == 'rus' ? 'selected' : ''; ?>><?= $oL::get('Орыс тілі')?></option>
                     </select>
                 </div>
 			</div>
