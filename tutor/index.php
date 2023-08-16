@@ -133,11 +133,9 @@
 						$sum_val = sprintf("%.2f", $tutor['sum_val']);
                         $sLastName = $tutor['lastname'];
                         $sFirstName = $tutor['firstname'];
-                        $sPatronymic = $tutor['patronymic'];
                         if ($_SESSION['lang'] != 'kaz'){
                             $sLastName = isset($tutor['lastnameRu']) && mb_strlen($tutor['lastnameRu']) ? $tutor['lastnameRu'] : $tutor['lastname'];
                             $sFirstName = isset($tutor['firstnameRu']) && mb_strlen($tutor['firstnameRu']) ? $tutor['firstnameRu'] : $tutor['firstname'];
-                            $sPatronymic = isset($tutor['patronymicRu']) && mb_strlen($tutor['patronymicRu']) ? $tutor['patronymicRu'] : $tutor['patronymic'];
                         }
 
 						echo "
