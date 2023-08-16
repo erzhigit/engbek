@@ -607,7 +607,7 @@
                                         $sFacultyName = isset($faculty['facultyNameRU']) && mb_strlen($faculty['facultyNameRU']) ? $faculty['facultyNameRU'] : $faculty['facultyNameKZ'];
                                     }
 
-									echo "<tr><td>".$i."</td><td>".$sFacultyName."</td><td>".$faculty['shtat_sany']."</td><td>". sprintf("%.2f",$faculty['sum_faculty'])."</td><td>". sprintf("%.2f",$faculty['avg_faculty'])."</td><td><a href = \"tolyk_faculty.php?ID=" . $faculty['FacultyID'] . "\">". $oL::get('Толық')." >></a></td></tr>";
+									echo "<tr><td>".$i."</td><td>".$sFacultyName."</td><td>".$faculty['shtat_sany']."</td><td>". sprintf("%.2f",$faculty['SumAllType'])."</td><td>". sprintf("%.2f",$faculty['avg_faculty'])."</td><td><a href = \"tolyk_faculty.php?ID=" . $faculty['FacultyID'] . "\">". $oL::get('Толық')." >></a></td></tr>";
 									$i++;
 
 								}
