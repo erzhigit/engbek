@@ -3,6 +3,13 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<head>
 	<?php include '../extensions/head_enbek.php'; ?>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            /* Locale for JS */
+            <? require_once '../locale/jslocale.php'; ?>
+
+            /* ]]> */
+        </script>
 	</head>
 	<body>
 		<div class = "upper_header">
@@ -175,7 +182,7 @@
 							faculties.FacultyID, 
 							status.statusID, 
 							cafedras.cafedraNameKZ, 
-							faculties.facultyNameKZ 
+							faculties.facultyNameKZ,
 							cafedras.cafedraNameRU, 
 							faculties.facultyNameRU 
 							FROM engbekter 

@@ -1,14 +1,14 @@
 function deleteRecord(btn) {
     var recordId = $(btn).data('id');
     Swal.fire({
-        title: 'Сіз сенімдісіз бе?',
-        text: "Жүктеген еңбегіңізді қайтара алмайсыз!",
+        title: ER_Locale.get('Сіз сенімдісіз бе?'),
+        text: ER_Locale.get('Жүктеген еңбегіңізді қайтара алмайсыз!'),
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#d33',
         cancelButtonColor: '#3085d6',
-        confirmButtonText: 'Иә, жоямын!',
-        cancelButtonText:'Жоқ'
+        confirmButtonText: ER_Locale.get('Иә, жоямын!'),
+        cancelButtonText:ER_Locale.get('Жоқ')
     }).then((result) => {
         if (result.isConfirmed) {
             $.ajax({
@@ -20,7 +20,7 @@ function deleteRecord(btn) {
                     if (response.success) {
                         Swal.fire({
                             icon: 'success',
-                            title: 'Жазба сәтті жойылды',
+                            title: ER_Locale.get('Жазба сәтті жойылды'),
                             showConfirmButton: false,
                             timer: 1500
                         }).then(() => {
@@ -29,7 +29,7 @@ function deleteRecord(btn) {
                         });
                       } else {
                         Swal.fire({
-                          title: 'Қате',
+                          title: ER_Locale.get('Қате'),
                           text: response.message,
                           icon: 'error'
                         });
@@ -37,8 +37,8 @@ function deleteRecord(btn) {
                     },
                     error: function() {
                         Swal.fire({
-                            title: 'Қате',
-                            text: 'Деректі өшіру кезінде қате пайда болды',
+                            title:ER_Locale.get('Қате'),
+                            text: ER_Locale.get('Деректі өшіру кезінде қате пайда болды'),
                             icon: 'error'
                         });
                     }

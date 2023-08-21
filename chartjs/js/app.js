@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$.ajax({
-		url: "https://ip.ayu.edu.kz/data.php",
+		url: "/data.php",
 		method: "GET",
 		success: function(data) {
 			console.log(data);
@@ -17,7 +17,7 @@ $(document).ready(function(){
 				labels: faculty,
 				datasets : [
 					{
-						label: 'Факультеттің орта балы',
+						label: ER_Locale.get('Факультеттің орта балы'),
 						backgroundColor: 'rgba(222, 115, 0, 1)',
 						borderColor: 'rgba(252, 252, 252, 1)',
 						hoverBackgroundColor: 'rgba(200, 200, 200, 1)',

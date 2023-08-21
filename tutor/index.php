@@ -14,6 +14,13 @@
 	<title><?= $oL::get('Басты бет')?></title>
 	<link rel = "stylesheet" type = "text/css" href = "../css/style.css">
 	<link rel = "stylesheet" type = "text/css" href = "../css/tutorStyle.css">
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        /* Locale for JS */
+        <? require_once '../locale/jslocale.php'; ?>
+
+        /* ]]> */
+    </script>
 	<script type = "text/javascript" src = "../js/jquery.js"></script>
 	<script type = "text/javascript" src = "../js/functions.js"></script>
 	<script type = "text/javascript" src = "../chartjs/js/chart.min.js"></script>

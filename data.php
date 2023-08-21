@@ -3,9 +3,9 @@
 	header('Content-Type: application/json;');
 	
 	define('db_host','localhost');
-	define('db_user','erbolat_root');
-	define('db_pass','erbolat8124__');
-	define('db_name','erbolat_indika_23');
+	define('db_user','root');
+	define('db_pass','');
+	define('db_name','indikativ');
 
 	
 	$mysqli = new mysqli(db_host,db_user,db_pass,db_name);
@@ -15,10 +15,11 @@
 		die("Connection failed: " . $mysqli->error);
 	}
 		
-	$sql = sprintf("SELECT T1.FacultyID, T1.facultyNameKZ,  (T1.typ1 + T1.typ2 + T1.typ3)/T1.shtat_sany AS avg_faculty
+	$sql = sprintf("SELECT T1.FacultyID, T1.facultyNameKZ, T1.facultyNameRU,  (T1.typ1 + T1.typ2 + T1.typ3)/T1.shtat_sany AS avg_faculty
 	FROM (SELECT
 	  faculties.FacultyID,
 	  faculties.facultyNameKZ, 
+	  faculties.facultyNameRU, 
 	  faculties.shtat_sany,
 	  SUM(CASE WHEN korsetkishter.typeID = 1 THEN engbekter.ball ELSE 0 END) * 0.55 AS typ1,
 	  SUM(CASE WHEN korsetkishter.typeID = 2 THEN engbekter.ball ELSE 0 END) * 0.35 AS typ2,
@@ -34,6 +35,9 @@
 	$data = array();
 	
 	foreach($result as $row){
+	    if ($_SESSION['lang'] != 'kaz'){
+	        $row['facultyNameKZ'] = $row['facultyNameRU'];
+        }
 		$data[] = $row;
 	}
 	

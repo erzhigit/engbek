@@ -26,6 +26,13 @@
 	<script type = "text/javascript" src = "../dataTables/jquery-3.5.1.js"></script>
 
 	<link rel = "stylesheet" type = "text/css" href = "../dataTables/jquery.dataTables.min.css">
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        /* Locale for JS */
+        <? require_once '../locale/jslocale.php'; ?>
+
+        /* ]]> */
+    </script>
 
 	<script type = "text/javascript" src = "../dataTables/jquery.dataTables.min.js"></script> 
 
