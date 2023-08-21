@@ -3,9 +3,9 @@
 	header('Content-Type: application/json;');
 	
 	define('db_host','localhost');
-	define('db_user','root');
-	define('db_pass','');
-	define('db_name','indikativ');
+    define('db_user','erbolat_root');
+    define('db_pass','erbolat8124__');
+    define('db_name','erbolat_indika_23');
 
 	
 	$mysqli = new mysqli(db_host,db_user,db_pass,db_name);
