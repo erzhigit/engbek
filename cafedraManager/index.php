@@ -13,6 +13,7 @@
 	?>
 	<title><?= $oL::get('Басты бет')?></title>
 	<link rel = "stylesheet" type = "text/css" href = "../css/style.css">
+	<script type = "text/javascript" src = "../js/jquery.js"></script>
     <script type="text/javascript">
         /* <![CDATA[ */
         /* Locale for JS */
@@ -20,7 +21,6 @@
 
         /* ]]> */
     </script>
-	<script type = "text/javascript" src = "../js/jquery.js"></script>
 	<script type = "text/javascript" src = "../js/functions.js"></script>
 	<script type = "text/javascript" src = "../chartjs/js/chart.min.js"></script>
 	<script type = "text/javascript" src = "../chartjs/js/jquery.min.js"></script>
