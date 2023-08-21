@@ -101,7 +101,9 @@
 				  <li><a href="<?=$sHome?>/shagymdar.php"><?= $oL::get('Шағымдарды көру')?></a></li>
 				</ul>
 			  </li>
+            <? if (in_array($_SESSION['roleID'], [2,3])) {?>
 			  <li><a href="../locale/index.php"><?= $oL::get('Сөздік')?></a></li>
+            <? } ?>
 			  <li><a href="../logout.php"><?= $oL::get('Шығу')?></a></li>
 			</ul>
 	</nav>
