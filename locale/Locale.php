@@ -22,7 +22,9 @@ class Locale
 
     public static function get($sVal, $sLang = 'kaz')
     {
-        if (!isset($_SESSION['lang'])|| (isset($_SESSION['lang']) && ( !mb_strlen($_SESSION['lang']) || $_SESSION['lang'] == 'kaz') )) {
+        if (!isset($_SESSION['lang'])
+            || (isset($_SESSION['lang']) && ( !mb_strlen($_SESSION['lang']) || $_SESSION['lang'] == 'kaz') )
+        ) {
             return $sVal;
         }
         self::init($_SESSION['lang']);

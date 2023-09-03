@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$.ajax({
-		url: "/data.php",
+		url: '/data.php?lang=' + ER_Locale.lang+'',
 		method: "GET",
 		success: function(data) {
 			console.log(data);

@@ -35,7 +35,7 @@
 	$data = array();
 	
 	foreach($result as $row){
-	    if ($_SESSION['lang'] != 'kaz'){
+	    if (isset($_GET['lang']) && $_GET['lang'] != 'kaz'){
 	        $row['facultyNameKZ'] = $row['facultyNameRU'];
         }
 		$data[] = $row;

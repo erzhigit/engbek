@@ -18,5 +18,6 @@ echo "OK \n";
 $query = mysqli_query($connection, "ALTER TABLE `tutors` ADD `lastnameRu` VARCHAR(50) DEFAULT NULL; ") or print(mysqli_error($connection));
 $query = mysqli_query($connection, "ALTER TABLE `tutors` ADD `firstnameRu` VARCHAR(50) DEFAULT NULL; ") or print(mysqli_error($connection));
 $query = mysqli_query($connection, "ALTER TABLE `tutors` ADD `patronymicRu` VARCHAR(50) DEFAULT NULL; ") or print(mysqli_error($connection));
+$query = mysqli_query($connection, "ALTER TABLE `korsetkishter` ADD `korsetkish_ati_ru` VARCHAR(255); ") or print(mysqli_error($connection));
 
 echo "OK \n";

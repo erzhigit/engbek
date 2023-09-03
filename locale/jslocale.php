@@ -16,6 +16,7 @@ $aTempLocale = array(
 ?>
 
 ER_Locale = $.parseJSON('<?= addslashes(json_encode($aTempLocale)) ?>');
+ER_Locale.lang = '<?= $_SESSION['lang'] ?? 'kaz'?>';
 ER_Locale.get = function(sWord)
 {
     return this[ sWord ] || sWord; // TODO: Case insensitive
